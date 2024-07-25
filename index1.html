@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" style="padding: 4px;margin: -11px;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <link rel="styleSheet" href="style.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="page">
+        <div class="main">
+            <div class="search" style="width: 90%;">
+                <input type="text" name="search" id="search" placeholder="Search your dream job...">
+                <button id="clearButton" >Clear</button>
+        
+            </div>
+        </div>
+        
+        
+        <div id="job-listings"></div>
+        
+        </div>
+
+    <button id="addNewJob" onclick="visibleNewJob()">Add New Job</button>
+
+
+    <form id="jobForm" style="display: none;" >
+        <h1 id="titleForm">Form to add new job </h1>
+        <div class="form-group">
+            <label for="logo">Enter company logo URL:</label>
+            <input type="text" id="logo" name="logo">
+        </div>
+        <div class="form-group">
+            <label for="companyName">Enter company name:</label>
+            <input type="text" id="companyName" name="companyName">
+        </div>
+        <div class="form-group">
+            <label for="isNew">Is this job new?</label>
+            <input type="checkbox" id="isNew" name="isNew">
+        </div>
+        <div class="form-group">
+            <label for="isFeatured">Is this job featured?</label>
+            <input type="checkbox" id="isFeatured" name="isFeatured">
+        </div>
+        <div class="form-group">
+            <label for="jobTitle">Job Title:</label>
+            <input type="text" id="jobTitle" name="jobTitle">
+        </div>
+        <div class="form-group">
+            <label for="jobPosted">Enter job posted info:</label>
+            <input type="text" id="jobPosted" name="jobPosted">
+        </div>
+        <div class="form-group">
+            <label for="jobType">Enter job type:</label>
+            <input type="text" id="jobType" name="jobType">
+        </div>
+        <div class="form-group">
+            <label for="jobLocation">Enter job location:</label>
+            <input type="text" id="jobLocation" name="jobLocation">
+        </div>
+        <div class="form-group">
+            <label for="jobSkills">Enter job skills (comma-separated):</label>
+            <input type="text" id="jobSkills" name="jobSkills">
+        </div>
+        <button type="submit" onclick="handleFormSubmit(event)">Add Job</button>
+    </form>
+
+    
+    <script src="myScript.js"></script>
+
+
+</body>
+</html>
